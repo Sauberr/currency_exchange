@@ -1,13 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
+import time
 
 EURO_GRV = 'https://www.google.com/search?q=%D0%B5%D0%B2%D1%80%D0%BE&rlz=1C1IXYC_ruUA983UA983&sxsrf=AJOqlzWGjwLHzJHEhO0MlIhp8lMAzq2CYg%3A1675756307966&ei=EwPiY4HWOpCVrwSip6fQBQ&oq=tdhj&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMhAIABCABBAKEAEQKhBGEIICMgoIABCABBCxAxAKMg0IABCABBCxAxCDARAKMg0IABCABBCxAxCDARAKMgwILhCABBDUAhAKEAEyCAgAELEDEIMBMhYILhCABBCxAxCDARDHARDRAxDUAhAKMgkIABCABBAKEAEyCggAEIAEELEDEAoyCQguEIAEEAoQAToHCCMQ6gIQJzoECCMQJzoLCAAQgAQQsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOgUIABCABDoICAAQgAQQsQM6CwguEIAEEMcBEK8BOgsIABCABBAKEAEQKjoHCAAQgAQQCkoECEEYAEoECEYYAFAAWIYGYIoWaAFwAXgAgAFUiAHGApIBATSYAQCgAQGwAQrAAQE&sclient=gws-wiz-serp'
 
 headers = {
 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
 
-current_datetime = datetime.now()
+current_datetime = time.ctime(time.time())
 
 full_page = requests.get(EURO_GRV, headers=headers)
 
