@@ -50,7 +50,7 @@ pln = convert[0].text
 PLN = pln.replace(',', '.')
 
 
-welcome_text = 'Welcome to "Privat24 Bank". Choose a service: exchange rate or currency exchange'
+welcome_text = 'Welcome to "Privat24 Bank".'
 print(welcome_text)
 
 print(f'Currency exchange for {current_datetime}')
@@ -61,10 +61,10 @@ print(f'1PLN --> {pln} GRV')
 while True:
 	try:
 
-		operation = str(input("Choose a service: currency exchange: "))
+		operation = str(input("Write the operation: currency exchange "))
 
 		if operation == 'currency exchange':
-			choose_currency = str(input('SELECT : $, PLN or €: '))
+			choose_currency = str(input('SELECT : $, PLN , € or GRV: '))
 			select_sum = int(input('Enter the amount to exchange: '))
 			if choose_currency == '$':
 				print(select_sum * round(float(DOLLAR), 2))
@@ -72,5 +72,9 @@ while True:
 				print(select_sum * round(float(EURO), 2))
 			if choose_currency == 'PLN':
 				print(select_sum * round(float(PLN), 2))
+			if choose_currency == 'GRV':
+				print(str((select_sum / round(float(PLN), 2))) + ' PLN')
+				print(str((select_sum / round(float(EURO), 2))) + ' €')
+				print(str((select_sum / round(float(DOLLAR), 2))) + '$')
 	except ValueError:
 		print('Choose number')
