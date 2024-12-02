@@ -1,6 +1,6 @@
-# Currency exchange project
+# Currency Exchange
 
-The project for study Python.
+This Python project is a lightweight currency converter that lets you instantly exchange Ukrainian ₴ to $ , €, and zł.  Leveraging the power of bs4 and requests, it fetches live exchange rates directly from Google Currency, ensuring accurate and up-to-the-minute conversions. Perfect for quick calculations on the go, this simple yet effective tool showcases the practical application of web scraping and currency conversion in Python.
 
 #### Stack:
 
